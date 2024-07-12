@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+DIR=$(dirname "$0")
+
+chmod +x $DIR/docker
+chmod +x $DIR/tools
+chmod +x $DIR/i3config
+
+bash $DIR/docker
+bash $DIR/i3config
+
+sudo bash $DIR/tools
