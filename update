@@ -5,6 +5,8 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+DEBIAN_FRONTEND=noninteractive
+
 apt update
 apt upgrade -y
 snap refresh

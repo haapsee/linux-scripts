@@ -1,4 +1,5 @@
 #!/bin/bash
+DEBIAN_FRONTEND=noninteractive
 
 rm -rf /home/${USER}/.config/i3
 git clone https://github.com/haapsee/i3.git /home/${USER}/.config/i3

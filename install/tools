@@ -5,6 +5,8 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+DEBIAN_FRONTEND=noninteractive
+
 apt update
 apt upgrade -y
 
@@ -14,6 +16,8 @@ apt install htop -y
 apt install nano -y
 apt install golang -y
 apt install python3 -y
+apt install pipenv -y
+apt install pavucontrol -y
 apt install speedtest-cli -y
 apt install thunderbird -y
 apt install openssh-server -y
