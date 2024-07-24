@@ -1,0 +1,15 @@
+#!/bin/bash
+
+PROFILE=$(powerprofilesctl get)
+
+if [ "$PROFILE" == "performance" ]; then
+    powerprofilesctl set balanced
+elif [ "$PROFILE" == "balanced" ]; then
+    powerprofilesctl set power-saver
+else
+    powerprofilesctl set performance
+fi
+
+# 9AC8 = "powermode" crc16 hash
+# 39624 = 0x9AC8
+notify-send -t 1500 -r 39624 "Power profile" $(powerprofilesctl get)
